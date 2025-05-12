@@ -30,7 +30,7 @@ CI_ENVIRONMENT = development
 # DATABASE
 #--------------------------------------------------------------------
 
-database.default.hostname = localhost
+database.default.hostname = db
 database.default.database = db
 database.default.username = db
 database.default.password = db
