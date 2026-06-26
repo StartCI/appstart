@@ -12,14 +12,13 @@ export default defineNuxtConfig({
       hashMode: true
     }
   },
-  modules: ['@nuxt/icon', '@nuxt/test-utils', '@nuxt-alt/proxy'],
+  routeRules: {
+    '/api/**': {
+      proxy: 'http://localhost/api/**'
+    }
+  },
+  modules: ['@nuxt/icon', '@nuxt/test-utils'],
   app: {
     cdnURL: '/nuxt/dist'
-  },
-  proxy: {
-    debug: true,
-    proxies: {
-      '/api': 'http://localhost'
-    }
   }
 })
